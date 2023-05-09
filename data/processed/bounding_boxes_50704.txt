@@ -1,0 +1,23 @@
+data/processed\Akshay\WhatsApp Image 2023-02-23 at 5.12.13 PM (1).png 208 309 533 747
+data/processed\Akshay\WhatsApp Image 2023-02-23 at 5.12.13 PM (2).png 326 328 541 621
+data/processed\Akshay\WhatsApp Image 2023-02-23 at 5.12.14 PM.png 195 438 434 733
+data/processed\Ananya\WhatsApp Image 2023-02-23 at 5.12.10 PM (1).png 401 430 682 835
+data/processed\Ananya\WhatsApp Image 2023-02-23 at 5.12.10 PM.png 441 590 726 963
+data/processed\Ananya\WhatsApp Image 2023-02-23 at 5.12.11 PM.png 477 511 795 920
+data/processed\Bhavya\WhatsApp Image 2023-02-23 at 5.12.11 PM (1).png 431 479 664 764
+data/processed\Bhavya\WhatsApp Image 2023-02-23 at 5.12.11 PM (2).png 434 409 756 801
+data/processed\Golchi\WhatsApp Image 2023-02-14 at 5.05.06 PM.png 359 250 706 730
+data/processed\Golchi\WhatsApp Image 2023-02-14 at 5.05.07 PM (1).png 305 196 634 616
+data/processed\Golchi\WhatsApp Image 2023-02-14 at 5.05.07 PM.png 296 261 647 735
+data/processed\Jain\WhatsApp Image 2023-02-14 at 5.05.08 PM (1).png 308 269 604 653
+data/processed\Jain\WhatsApp Image 2023-02-14 at 5.05.08 PM (2).png 314 305 627 692
+data/processed\Jain\WhatsApp Image 2023-02-14 at 5.05.08 PM.png 252 248 632 738
+data/processed\Saksham\WhatsApp Image 2023-02-23 at 5.12.09 PM (1).png 8 355 643 1106
+data/processed\Saksham\WhatsApp Image 2023-02-23 at 5.12.09 PM (2).png 239 280 860 1040
+data/processed\Saksham\WhatsApp Image 2023-02-23 at 5.12.09 PM.png 561 392 1105 1085
+data/processed\Sandeep\WhatsApp Image 2023-02-23 at 5.12.12 PM (1).png 479 480 730 813
+data/processed\Sandeep\WhatsApp Image 2023-02-23 at 5.12.12 PM.png 420 404 715 755
+data/processed\Sandeep\WhatsApp Image 2023-02-23 at 5.12.13 PM.png 422 409 727 766
+data/processed\Suhail\WhatsApp Image 2023-02-23 at 5.12.15 PM.png 248 108 484 411
+data/processed\Utkarsh\WhatsApp Image 2023-02-23 at 5.08.13 PM (1).png 581 514 658 596
+data/processed\Utkarsh\WhatsApp Image 2023-02-23 at 5.08.13 PM.png 391 116 673 477
