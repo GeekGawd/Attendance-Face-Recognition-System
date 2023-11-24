@@ -13,17 +13,24 @@
 
 
 ## User Instruction
-After downloading the project first you have to install the following libraries.
+To install the project use the instructions
+### Download Python 3.6
+
+Use the following link: [Download Python3.6](https://www.python.org/downloads/release/python-360/)
+Install python version 3.6 and Add to Path
+
 ### Installation
 You can install all the dependencies at once by running the following command from your terminal.
 ``` python
+    $ virtualenv venv --python=3.6
+    # Alternatively you can also specify the full path to python executable
+    $ virtualenv venv --python="full path that is supported as per the OS filesystem"
+    # Activate virtualenv and install the dependencies
     $ pip install -r requirements.txt
 ```
-##### For the installation of torch using "pip" run the following command
+### For Issues Installing bcolz requirement 
+Contact Suyash Singh
 
-``` python
-    $ pip3 install torch===1.2.0 torchvision===0.4.0 -f https://download.pytorch.org/whl/torch_stable.html
-```
 ### Project Setup
 
 #### pre-trained model
