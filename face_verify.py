@@ -8,7 +8,23 @@ from config import get_config
 from mtcnn import MTCNN
 from Learner import face_learner
 from utils import load_facebank, draw_box_name, prepare_facebank
+from database import mark_attendance_db
+import time
+import threading
 
+# Create a semaphore with the maximum number of threads allowed
+semaphore = threading.Semaphore()
+
+def mark_attendance_db_thread(name):
+    # Acquire the semaphore
+    semaphore.acquire()
+
+    try:
+        # Call the function
+        mark_attendance_db(name)
+    finally:
+        # Release the semaphore
+        semaphore.release()
 
 parser = argparse.ArgumentParser(description='for face verification')
 parser.add_argument("-s", "--save", help="whether save",action="store_true")
@@ -45,7 +61,6 @@ cap = cv2.VideoCapture(0)
 cap.set(3,500)
 cap.set(4,500)
 
-
 class faceRec:
     def __init__(self):
         self.width = 800
@@ -72,6 +87,9 @@ class faceRec:
                                 name = names[0]
                             else:    
                                 name = names[results[idx]+1]
+                                thread = threading.Thread(target=mark_attendance_db_thread, args=(name,))
+                                thread.start()
+
                             frame = draw_box_name(bbox, names[results[idx] + 1], frame)
                 except:
                     pass    
@@ -86,3 +104,6 @@ class faceRec:
         cap.release()
 
         cv2.destroyAllWindows()    
+    
+if __name__ == '__main__':
+    faceRec().main()
