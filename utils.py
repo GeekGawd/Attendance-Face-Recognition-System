@@ -136,21 +136,21 @@ def gen_plot(fpr, tpr):
     plot = plt.plot(fpr, tpr, linewidth=2)
     buf = io.BytesIO()
     plt.savefig(buf, format='jpeg')
-    buf.seek(0)
+    buf.seek(0) 
     plt.close()
     return buf
 
 def draw_box_name(bbox,name,frame):
-    if name == "Unknown":
-        frame = cv2.rectangle(frame,(bbox[0],bbox[1]),(bbox[2],bbox[3]),(0,0,000),6)
-    else:
+    # if name == "Unknown":
+    #     frame = cv2.rectangle(frame,(bbox[0],bbox[1]),(bbox[2],bbox[3]),(0,0,000),6)
+    # else:
         frame = cv2.rectangle(frame,(bbox[0],bbox[1]),(bbox[2],bbox[3]),(0,0,000),6)
         frame = cv2.putText(frame,
                         name,
                         (bbox[0],bbox[1]), 
                         cv2.FONT_HERSHEY_SIMPLEX, 
-                        2,
+                        1,
                         (0,255,0),
                         3,
                         cv2.LINE_AA)
-    return frame
+        return frame

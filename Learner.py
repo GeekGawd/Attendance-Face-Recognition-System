@@ -235,7 +235,7 @@ class face_learner(object):
         names : recorded names of faces in facebank
         tta : test time augmentation (hfilp, that's all)
         '''
-        embs = []
+        embs = [torch.zeros(1, 512)]
         for img in faces:
             if tta:
                 mirror = trans.functional.hflip(img)
@@ -243,10 +243,20 @@ class face_learner(object):
                 emb_mirror = self.model(conf.test_transform(mirror).to(conf.device).unsqueeze(0))
                 embs.append(l2_norm(emb + emb_mirror))
             else:                        
-                embs.append(self.model(conf.test_transform(img).to(conf.device).unsqueeze(0)))
-        source_embs = torch.cat(embs)
+                emb = (self.model(conf.test_transform(img).to(conf.device).unsqueeze(0)))
+                embs.append(emb)
+
+        source_embs = torch.cat(embs[-1:])
         
-        diff = source_embs.unsqueeze(-1) - target_embs.transpose(1,0).unsqueeze(0)
+        # Move source_embs to CUDA
+        source_embs = source_embs.to('cuda:0')
+
+        # Move target_embs to CUDA
+        target_embs = target_embs.to('cuda:0')
+
+        # Perform the operation
+        diff = source_embs.unsqueeze(-1) - target_embs.transpose(1, 0).unsqueeze(0)
+
         dist = torch.sum(torch.pow(diff, 2), dim=1)
         minimum, min_idx = torch.min(dist, dim=1)
         if float(minimum[0]) > 0.9:

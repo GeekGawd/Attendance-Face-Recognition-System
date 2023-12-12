@@ -20,8 +20,6 @@ app = FastAPI()
 
 templates = Jinja2Templates(directory="templates")
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
-
 def json_serial(obj):
     """JSON serializer for objects not serializable by default json code"""
 

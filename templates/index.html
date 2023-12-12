@@ -2,20 +2,32 @@
     <head>
     <style>
     body {
-        display:block;
-        background: url("E:\Github\Flask\images.png"); 
+        /* display:block; */
+        background: url("https://res.cloudinary.com/dy3aqtaaf/image/upload/v1701605487/samples/Screenshot_2023-12-03_at_5.41.18_PM_hwg8ya.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
     }
     h1{
+        font-size: 50px;
         text-align: center;
         text-decoration: underline;
         text-transform: uppercase;
+        padding-top: 20px;
     }
+    img{
+        height: 75%;
+        border: 5px solid rgb(118, 205, 255);
+        border-radius: 20px;
+    }
+
     </style>
     <title>Face Recognition</title>
     </head>
     <body>
     
-    <h1 align = "center">Face Recognition</h1>
+    <h1 align = "center">SDC: Attendance</h1>
     <p align ="center">
     <img src="{{ url_for('video_feed') }}">
     </p>
