@@ -249,10 +249,10 @@ class face_learner(object):
         source_embs = torch.cat(embs[-1:])
         
         # Move source_embs to CUDA
-        source_embs = source_embs.to('cuda:0')
+        source_embs = source_embs.to('cpu')
 
         # Move target_embs to CUDA
-        target_embs = target_embs.to('cuda:0')
+        target_embs = target_embs.to('cpu')
 
         # Perform the operation
         diff = source_embs.unsqueeze(-1) - target_embs.transpose(1, 0).unsqueeze(0)
